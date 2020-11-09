@@ -4,24 +4,6 @@
 	<meta charset="utf-8">
 	<title>Web design</title>
 
-	<script> 
-        
-        let anchorSelector = 'a[href^="#"]'; 
-        let anchorList =  
-            document.querySelectorAll(anchorSelector); 
-        anchorList.forEach(link => { 
-            link.onclick = function (e) { 
-                e.preventDefault(); 
-                let destination =  
-                    document.querySelector(this.hash); 
-                destination.scrollIntoView({ 
-                    behavior: 'smooth' 
-                }); 
-            } 
-        }); 
-    </script> 
-
-
 	<link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Frank+Ruhl+Libre:wght@300&family=Xanh+Mono&display=swap" rel="stylesheet">
 	
 	<style type="text/css">
@@ -38,16 +20,7 @@
 		h1{
 			color: beige;
 		}
-		h3{
-			color: white;
-			
-			letter-spacing: 3px; 
-		}
-		h2{
-			color: beige;
-			text-shadow: 
-		}
-
+		
 		#navbar {
 		  overflow: hidden;
 		  background-color: #333;
@@ -64,46 +37,15 @@
 		  font-size: 17px;
 		}
 
-		#navbar a:hover {
-		  background-color: #ddd;
-		  color: black;
-		}
-
-		#navbar a.active {
-		  background-color: #4CAF50;
-		  color: white;
-		}
 
 		#navbar .right {
 			float: right;
 		}
 
-		.welcome-text{
-			height: 50%;
-		}
-		.welcome-text h1{
-			text-align: center;
-			color: #6BEF5A;
-			font-size: 60px;
-		}	
-		.welcome-text a{
-			border: 3px solid #fff;
-			padding: 10px 25px;
-			text-decoration: none;
-			text-transform: uppercase;
-			color: white;
-			font-size: 14px;
-			margin: 20px auto 0 auto;
-		    text-align: center;
-		    display: block;
-		    width: 100px;
-			}
-		.welcome-text a:hover{
-			background: #82CC79;
-			color: white;
+		
 		}
 		#home {
-			height: 70vh;
+			height: 80vh;
 			background-image: black;
 			background-repeat: no-repeat;
 			background-position: center;
@@ -131,7 +73,7 @@
 		.about-image {
 
 			float: left;
-			width: 400px;
+			width: 300px;
 			height: 300px;
 			margin: 24px;
 		}	
@@ -139,9 +81,35 @@
 		.about-paragraph{
 			
 			float: left;
-			width: 500px;
+			width: 400px;
 			height: 300px;
 			margin: 40px
+		}
+
+		.about-sword{
+			float: left;
+			width: 100px;
+			height: 100px;
+			margin: 40px;
+		}
+		.about-bomb{
+			float: left;
+			width: 50px;
+			height: 50px;
+			margin:40px;
+		}
+		.about-spear{
+			float: left;
+			width: 50px;
+			height: 200px;
+			margin: 40px;
+		}
+
+		.about-long{
+			float: left;
+			width: 100px;
+			height: 200px;
+			margin: 40px;
 		}
 
 		.about-quotes{
@@ -165,11 +133,43 @@
 		.about-text {
 			font-size: 20px;
 			display: flex !important;
+			text-align: justify;
 			align-items: center;
-	    	height: 400px;
+	    	height: auto;
 	    	margin-left:40px;
 	    	margin-right: 40px;
+	    	padding: 0 60px;
 		}
+        .about-swordlong{
+        	font-size: 20px;
+        	display: flex;
+        	height: auto;
+        	margin-left: 20px;
+        	margin-right: 20px;
+        	padding: 0 60px
+        }
+        .about-shortsword{
+        	font-size: 20px;
+        	display: flex;
+        	height: auto;
+        	margin-left: 10px;
+        	margin-right: 10px;
+        }
+        .about-bombs{
+        	font-size: 20px;
+        	display: flex;
+        	height: auto;
+        	margin-left: 15px;
+        	margin-right: 15px;
+        }
+        .about-spears{
+        	font-size: 20px;
+        	display: flex;
+        	height: auto;
+        	margin-left: 15px;
+        	margin-right: 15px;
+        }
+	
 
 		.about-title {
 			margin-bottom: 50px;
@@ -190,7 +190,7 @@
 		}
 
 		.card {
-		  background 
+		  
 		  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2);
 		  max-width: 300px;
 		  margin: auto;
@@ -220,7 +220,7 @@
 
 		}
 		.contact-home{
-			height: 30vh;
+			height: 20vh;
 			background-color: #1d1f1f;;
 			background-repeat: no-repeat;
 			background-position: center;
@@ -255,66 +255,82 @@
 			<div id="navbar">
 				<a href="#">Mochi Island</a>
 				<div class="right">
-					<a href="#">Home</a>
+					<a href="#home">Home</a>
 		 			<a href="#about">About</a>
-		 			<a href="#developers">Developers</h1></a>
+		 			<a href="#developers">Developers</a>
 		 			<a href="#contact">Contact</a>
 		 			
 				</div>
 			</div>
+		</div>
 			
  			<div class="welcome-text">
 		    <p class="about-quotes"> "Am I too strong for you to handle? Being small doesn't mean I can't fight" </p>
 			</div>
-		</div>
+		
 		
 		<div id="about">
-
+           <hr>
 			<h1 class="about-title">About</h1>
-			<hr>
+		
+			
 
 			<div class="about-div">
-				<p class="about-description">Mochi Island is a Fantasy text turn based RPG game, where you play as one of the leaders of the monchi clan and your goal is to stop the Corrupted Monchi Leader from consuming you and your people. While fighting the boss you will be able to scavenge for various items within the area, from various weapons left behind by the fallen warriors of the past to mysterious berries that gives you positive or negative effects. Do eat them at your own risk. But beware the boss has a special attack, and is also able to obtain mysterious berries by sucking the area.</p>
+				<p style="padding: 0px 0px; width: 1140px; height: 0px;" class="about-description">Mochi Island is a Fantasy text turn based RPG game, where you play as one of the leaders of the monchi clan and your goal is to stop the Corrupted Monchi Leader from consuming you and your people. While fighting the boss you will be able to scavenge for various items within the area, from various weapons left behind by the fallen warriors of the past to mysterious berries that gives you positive or negative effects. Do eat them at your own risk. But beware the boss has a special attack, and is also able to obtain mysterious berries by sucking the area.</p>
 			</div>
 
 			<div class="about-div">
-				<img src="imgisland.jpg" alt="island" class="about-picture">
-				<p class="about-text">Mochi Island is an island inhabited by mochis high in the sky. After years and years of fighting the area in which the mochis had their ferocious battles flew up high in the sky  and was separated into 3 different islands. None of the mochis know how and why this happened and probably did not care due to how the only thing they cared for atbthe time was destroying each other. As the mochi leaders declared a truce with each other, they unanimously agreed to build a new civalization ontop of the flying islands. There the mochis from the 5 clans live in harmony among each other</p>
+				<img style="padding: 0px 50px; height: 200px; width: 300px;" src="imgisland.jpg" alt="island" class="about-picture">
+				<p style="padding: 100px 0px; width: 730px; height: 80px;" class="about-text">Mochi Island is an island inhabited by mochis high in the sky. After years and years of fighting the area in which the mochis had their ferocious battles flew up high in the sky  and was separated into 3 different islands. None of the mochis know how and why this happened and probably did not care due to how the only thing they cared for atbthe time was destroying each other. As the mochi leaders declared a truce with each other, they unanimously agreed to build a new civalization ontop of the flying islands. There the mochis from the 5 clans live in harmony among each other</p>
 		    </div>
-			
-            <h1 class="about-title">Character</h1>
 			<hr>
+            <h1 class="about-title">Character</h1>
+		
 
 			<div class="about-div">
-				<img src="pinky.png" alt="heh" class="about-image">
-				<p class="about-text">Mochi Is the leader of one of the 5 mochi clans. A kind, compassionate, polite and has the heart of a child. He may seem like a vounrable creature that can be killed in a snap but don't underestimate him for he is one of the most fearsome and strongest warriors in his clan. Him and his clan are neutral mochis who finds the whole war between the other 5 clans to be pointless but wouldn't hesitate to fight back when it involves their clan being endangered, so when they heard that the other 4 clans are calling for a truce they where relieved and happy, Mochi especially. But little did he and his clan know that a greater storm is coming for them.
+				<img style="padding: 10px 20px; height: 250px; width: 250px" src="pinky.png" alt="heh" class="about-image">
+				<p style="padding: 0px 50px; width: 800px" class="about-text">Mochi Is the leader of one of the 5 mochi clans. A kind, compassionate, polite and has the heart of a child. He may seem like a vounrable creature that can be killed in a snap but don't underestimate him for he is one of the most fearsome and strongest warriors in his clan. Him and his clan are neutral mochis who finds the whole war between the other 5 clans to be pointless but wouldn't hesitate to fight back when it involves their clan being endangered, so when they heard that the other 4 clans are calling for a truce they where relieved and happy, Mochi especially. But little did he and his clan know that a greater storm is coming for them.
 
 			</p>
 			</div>
-			
+			<hr>
+            <h1 style="text-align: center" class="about-title">Weapon</h1>
 			<div class="about-div">
-				<img src="pinkyy.png" alt="hsh" class="about-paragraph">
-				<p class="about-text">The mochi king is one of the leaders of the 5 mochi clans, one who thrives off of war and believes that winning is everything, cared for the mochis who fought with and alongside him and believes that you can't settle a problem by making peace with your enemies. He didn't agree with the peace treaty and vows to consume the other leaders to finish their conflict and to justify the deaths of his fallen mochis</p>
-		    </div>
+		    	<img style="padding: 0px 70px; height: 100px; width: 250px;" src="shortswords.png" alt="aha" class="about-sword">
+		    	<p style="width: 500px;" class="about-shortsword">A Sword used by basic infantry units to fight the other mochis</p>
+       </div>
+		    <div class="about-div">
+		    	<img style="padding: 0px 55px; height: 120px; width: 220px;" src="longswords.png" alt="hha" class="about-long">
+		    	<p  style="width: 500px"class="about-swordlong">A Sword used by each of the clan elite guard. Powerful weapons that deals a lot of damage to those unfortunate to be at the edge of their blade.</p>
+       </div>
+		    <div class="about-div">
+		    	<img style="padding: 0px 110px; height: 100px; width: 180px;" src="bombs.png" alt="hahas" class="about-bomb">
+		    	<p style="width: 500px;"class="about-bombs">Long ranged items that each mochi clan uses to throw at their opponents blowing them to bits and to destroy their fortresses</p>
+       </div> 
+		    <div class="about-div">
+		  	    <img style="padding: 0px 75px; height: 150px; width: 250px;" src="spear.png" alt="hshsh" class="about-spear">
+		  	    <p style="padding-top: 0px; width: 500px"class="about-spears">A long ranged weapon used by tanks to stab their opponents from a far as they protect their comrades with their powerful shields.</p>
+        </div> 
 		</div>
 
 		<div id="developers" class="developers-div">
 
 			<h1 class="about-title">Developers</h1>
 
+
 			<table class="dev-table" cellpadding="10">
 				<tr>
 					<td>
 						<div class="card">
-  							<img src="ben.jpg" alt="John">
-  							<p class="position">"Time is gold</p>
+  							<img src="ben.jpg" alt="benpic">
+  							<p class="position">"Time is gold"</p>
   							<h4>Ben Santos (Tester)</h4>
 						</div>
 					</td>
 
 					<td>
 						<div class="card">
-  							<img src="ken.jpg" alt="John">
+  							<img src="ken.jpg" alt="kenpic">
   							<p class="position">"Today is struggle, Tomorrow is success"</p>
   							<h4>Ken Gallardo (Tester)</h4>
 						</div>
@@ -322,7 +338,7 @@
 
 					<td>
 						<div class="card">
-  							<img src="JHON.jpg" alt="John">
+  							<img src="JHON.jpg" alt="jhonpic">
   							<p class="position">"Success is not final; failure is not fatal: It is the courage to continue that counts."</p>
   							<h4>Jhon Rosales (Tester)</h4>
   							
@@ -333,7 +349,7 @@
 				<tr>
 					<td>
 						<div class="card">
-  							<img src="GABRIEL.jpg" alt="John">
+  							<img src="GABRIEL.jpg" alt="gabpic">
   							<p class="position">"To die would be an awfully big adventure"</p>
   							<h4>Gabriel Salazar (Analyst)</h4>
 						</div>
@@ -341,7 +357,7 @@
 
 					<td>
 						<div class="card">
-  							<img src="JAHNA.jpg" alt="John">
+  							<img src="JAHNA.jpg" alt="jahnapic">
   							<p class="position">"I will never forgive you for what you did" something like that stuff"</p>
   							<h4>Jahna Dasas (Analyst)</h4>
 						</div>
@@ -349,7 +365,7 @@
 
 					<td>
 						<div class="card">
-  							<img src="DESIREE.jpg" alt="John">
+  							<img src="DESIREE.jpg" alt="desireepic">
   							<p class="position">"Failure is not the end"</p>
   							<h4>Desiree Cal (Front-End)</h4>
 						</div>
@@ -360,7 +376,7 @@
 				<tr>
 					<td>
 						<div class="card">
-  							<img src="ZHIELA.jpg" alt="John">
+  							<img src="Zhiela1.jpg" alt="zhielapic">
   							<p class="position">"Life is like code, You'll face many error before you achieve success"</p>
   							<h4>Zhiela Quiambao (Front-End)</h4>
 						</div>
@@ -368,7 +384,7 @@
 
 					<td>
 						<div class="card">
-  							<img src="JOHNA3.jpg" alt="John">
+  							<img src="JOHNA3.jpg" alt="johnapic">
   							<p class="position">"Life is like a program that you have to code to run your life".</p>
   							<h4>Johna Salazar (Front-End)</h4>
   							
@@ -377,7 +393,7 @@
 
 					<td>
 						<div class="card">
-  							<img src="ERIN.jpg" alt="John">
+  							<img src="ERIN.jpg" alt="erinpic">
   							<p class="position">"Life is like a game, you gain experience from living"</p>
   							<h4>Erin Santos (Back-End)</h4>
 						</div>
@@ -396,7 +412,7 @@
 		<br>
 		 (Monday to Friday) 
 		 <br>
-		1-877-930</p>
+		1-111-111</p>
 	</div>
 	
 </div>
